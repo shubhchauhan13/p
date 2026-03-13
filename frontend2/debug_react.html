@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Debug</title>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      window.addEventListener('error', function(e) {
+        document.body.innerHTML += '<pre style="color:red;z-index:9999;position:absolute;top:0;left:0;background:black;padding:20px;">' + e.error.stack + '</pre>';
+      });
+      window.addEventListener('unhandledrejection', function(e) {
+        document.body.innerHTML += '<pre style="color:red;z-index:9999;position:absolute;top:0;left:0;background:black;padding:20px;">' + e.reason.stack + '</pre>';
+      });
+    </script>
+    <script type="module" src="http://localhost:5173/src/main.jsx"></script>
+  </body>
+</html>

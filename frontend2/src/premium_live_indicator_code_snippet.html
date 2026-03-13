@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium LIVE Indicator</title>
+    <!-- Importing Inter font for a clean, premium tech look -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Color Palette */
+            --bg-dark: #09090b;
+            --poly-green: #00d38a;
+            --live-red-light: #ff4d4d;
+            --live-red-main: #e60000;
+            --live-red-dark: #4d0000;
+            --live-red-glow: rgba(255, 26, 26, 0.4);
+            --live-red-glow-strong: rgba(255, 26, 26, 0.7);
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-dark);
+            font-family: 'Inter', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            color: white;
+        }
+
+        /* --------------------------------------
+           PREMIUM LIVE INDICATOR CSS
+           -------------------------------------- */
+           
+        .premium-live-text {
+            font-size: 15px;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            
+            /* Rich fluid gradient inside the text - Brighter, pure reds for urgency */
+            background: linear-gradient(
+                110deg,
+                #ff0000 0%,
+                #ff6666 25%,
+                #e60000 50%,
+                #ff3333 75%,
+                #ff0000 100%
+            );
+            background-size: 200% auto;
+            color: transparent;
+            -webkit-background-clip: text;
+            background-clip: text;
+            
+            /* Fluid animation and glow pulse - Sped up for a sense of urgency */
+            animation: 
+                fluidText 2s linear infinite, 
+                glowPulse 1.2s ease-in-out infinite alternate;
+                
+            user-select: none;
+            cursor: default;
+        }
+
+        /* Fluid background moving across the text */
+        @keyframes fluidText {
+            to { background-position: 200% center; }
+        }
+
+        /* Pulsing neon glow behind the text - Brighter and more intense */
+        @keyframes glowPulse {
+            0% {
+                filter: drop-shadow(0 0 5px rgba(255, 0, 0, 0.8)) 
+                        drop-shadow(0 0 15px rgba(255, 0, 0, 0.5));
+            }
+            100% {
+                filter: drop-shadow(0 0 8px rgba(255, 100, 100, 1)) 
+                        drop-shadow(0 0 20px rgba(255, 0, 0, 0.9))
+                        drop-shadow(0 0 35px rgba(255, 0, 0, 0.7));
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- THE NEW PREMIUM TEXT-ONLY LIVE INDICATOR -->
+    <div class="premium-live-text">LIVE</div>
+
+</body>
+</html>

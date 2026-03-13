@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Real-time Polymarket prediction market data dashboard with live price streaming" />
+  <title>Polymarket.live — Real-Time Market Data</title>
+</head>
+
+<body>
+  <div id="root"></div>
+  <script>
+    window.onerror = function (msg, src, line, col, err) {
+      document.getElementById('root').innerHTML = '<div style="padding:40px;color:#ff6b6b;font-family:monospace;background:#0a0b0f;min-height:100vh"><h1>JS Error</h1><pre style="background:#1a1b25;padding:20px;border-radius:8px;white-space:pre-wrap;color:#f0f0f5">' + msg + '\n\nSource: ' + src + ':' + line + ':' + col + '\n\n' + (err && err.stack ? err.stack : '') + '</pre></div>';
+    };
+    window.onunhandledrejection = function (e) {
+      document.getElementById('root').innerHTML = '<div style="padding:40px;color:#ff6b6b;font-family:monospace;background:#0a0b0f;min-height:100vh"><h1>Unhandled Promise Rejection</h1><pre style="background:#1a1b25;padding:20px;border-radius:8px;white-space:pre-wrap;color:#f0f0f5">' + (e.reason && e.reason.stack ? e.reason.stack : e.reason) + '</pre></div>';
+    };
+  </script>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+
+</html>

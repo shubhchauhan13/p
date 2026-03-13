@@ -1,0 +1,42 @@
+# Dependencies
+node_modules/
+backend/venv/
+frontend/node_modules/
+frontend2/node_modules/
+frontend3/node_modules/
+
+# Caches
+.npm-cache/
+backend/.npm-cache/
+frontend/.npm-cache/
+__pycache__/
+*.pyc
+
+# Build output
+backend/frontend_build/
+dist/
+
+# Logs
+*.log
+backend/backend_debug.log
+backend/backend.log
+
+# Database
+backend/polymarket.db
+
+# Env
+.env
+.env.*
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Vite
+frontend/.vite/
+backend/polymarket.db-shm
+backend/polymarket.db-wal
